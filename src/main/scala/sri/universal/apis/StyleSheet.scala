@@ -5,7 +5,7 @@ import scala.scalajs.js.annotation.JSImport
 
 @js.native
 @JSImport(
-  "react-native/Libraries/Renderer/src/renderers/native/ReactNativePropRegistry",
+  "ReactNativePropRegistry",
   JSImport.Namespace)
 object ReactNativePropRegistry extends js.Object {
 

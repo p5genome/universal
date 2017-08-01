@@ -1,6 +1,6 @@
 name := "universal"
 
-//version := "2017.4.0-SNAPSHOT"
+version := "2017.8.1-beta"
 
 enablePlugins(ScalaJSPlugin)
 
@@ -8,7 +8,7 @@ val scala211 = "2.11.11"
 
 val scala212 = "2.12.2"
 
-scalaVersion := scala211
+scalaVersion := scala212
 
 crossScalaVersions := Seq(scala211, scala212)
 
@@ -26,18 +26,15 @@ libraryDependencies += "scalajs-react-interface" %%% "macros" % "2017.3.26-beta"
 libraryDependencies += "org.scala-js" %%% "scalajs-dom" % "0.9.1"
 
 //bintray
-resolvers += Resolver.jcenterRepo
+//resolvers += Resolver.jcenterRepo
 
-organization := "scalajs-react-interface"
+organization := "p5genome-sri"
+//organization := "scalajs-react-interface"
+
+publishTo := Some(Resolver.file("universal", file("repo"))(Patterns(true, Resolver.mavenStyleBasePattern)))
 
 licenses += ("Apache-2.0", url(
   "https://www.apache.org/licenses/LICENSE-2.0.html"))
-
-bintrayOrganization := Some("scalajs-react-interface")
-
-bintrayRepository := "maven"
-
-bintrayVcsUrl := Some("git@github.com:scalajs-react-interface/universal.git")
 
 publishArtifact in Test := false
 
